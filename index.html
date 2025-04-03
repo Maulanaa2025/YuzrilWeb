@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e2e;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        
+        .navbar {
+            width: 100%;
+            background-color: #282a36;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .navbar .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #8be9fd;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: #f8f8f2;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #ff79c6;
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            margin-top: 120px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 4px solid #ff79c6;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #50fa7b;
+            color: #282a36;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: transform 0.3s ease, background 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #40c07d;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Yuzril</a>
+        <div class="nav-links">
+            <a href="index.html">About</a>
+            <a href="profile.html">Profile</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="formulir.html">Formulir</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>About Me</h1>
+        <img src="image/foto2.jpg.jpeg" alt="Foto Saya" class="profile-img">
+        <p><b>Tanggal Lahir:</b> 05 Juli 2006</p>
+        <p><b>Alamat:</b> Jl. TGH Darussolihin-Kalijaga Tengah</p>
+        <p><b>Surel:</b> <a href="mailto:yuzrilm13@gmail.com" style="color: #50fa7b; text-decoration: none;">yuzrilm13@gmail.com</a></p>
+        <p><b>Telepon:</b> <a href="tel:+6283104988499" style="color: #50fa7b; text-decoration: none;">+62 83104988499</a></p>
+        <p><b>Pendidikan:</b> Mahasiswa Pendidikan Informatika, Universitas Hamzanwadi</p>
+        <p><b>Hobi:</b>Olahraga, Hiking Dan Membaca Buku</p>
+        <p>Perkenalkan nama saya Yuzril. Saya adalah seorang mahasiswa Semester 4 belajar coding. Saya sangat tertarik dengan pengembangan web dan selalu berusaha untuk meningkatkan keterampilan saya.</p>
+        <a href="galeri.html" class="button">Lihat Galeri</a>
+    </div>
+</body>
+</html>

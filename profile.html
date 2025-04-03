@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil & Jadwal Perkuliahan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #313244;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #f38ba8;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #cdd6f4;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f38ba8;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .profile-container {
+            background: #45475a;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-container:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f38ba8;
+            margin-bottom: 15px;
+        }
+
+        .profile-container h2 {
+            font-size: 2em;
+            color: #f38ba8;
+            margin-bottom: 10px;
+        }
+
+        .schedule-container {
+            background-color: #45475a;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 800px;
+            margin-top: 40px;
+        }
+
+        .schedule-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #f38ba8;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table th, .table td {
+            border: 1px solid #cdd6f4;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #f38ba8;
+            color: #1e1e2e;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Yuzril</a>
+        <div class="nav-links">
+            <a href="index.html">About</a>
+            <a href="profile.html">Profile</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="formulir.html">Formulir</a>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="profile-container">
+            <img src="image/foto1.jpg.jpeg" alt="Foto Profil">
+            <h2>Yuzril Aziz Maulana</h2>
+            <p>Umur: 19 tahun</p>
+            <p>Gender: Laki-laki</p>
+            <p>NPM: 230305023</p>
+            <p>Alumni: Madrasah Aliyah Kalijaga</p>
+        </div>
+
+        <div class="schedule-container">
+            <h1>Jadwal Perkuliahan Periode 2024-2025 Genap</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>HARI</th>
+                        <th>WAKTU</th>
+                        <th>KODE</th>
+                        <th>MATAKULIAH</th>
+                        <th>RUANGAN</th>
+                        <th>KELAS</th>
+                        <th>DOSEN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Senin</td><td>14:00 - 15:40</td><td>PIN8423</td><td>Jaringan Dasar</td><td>Labkom 1</td><td>4 A</td><td>JAMALLUDDIN</td></tr>
+                    <tr><td>2</td><td>Selasa</td><td>08:55 - 10:35</td><td>PIN8422</td><td>Pemrograman Web</td><td>Labkom 1</td><td>4 A</td><td>HERI KUSWANTO</td></tr>
+                    <tr><td>3</td><td>Selasa</td><td>10:35 - 12:35</td><td>FMA6501</td><td>Aplikasi Komputer</td><td>Labkom 1</td><td>4 A</td><td>MUHAMMOD ZAMRONI USKA</td></tr>
+                    <tr><td>4</td><td>Rabu</td><td>10:35 - 12:35</td><td>PIN8424</td><td>Sistem Informasi</td><td>Labkom 1</td><td>4 A</td><td>BAIQ DESI DWI ARIANTI</td></tr>
+                    <tr><td>5</td><td>Rabu</td><td>14:00 - 15:40</td><td>PIN8425</td><td>Pengembangan Aplikasi Mobile</td><td>Labkom 1</td><td>4 A</td><td>JAMALLUDDIN</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil & Jadwal Perkuliahan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #313244;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #f38ba8;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #cdd6f4;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f38ba8;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .profile-container, .gallery-container, .form-container {
+            background: #45475a;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .profile-container:hover, .gallery-container:hover, .form-container:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f38ba8;
+            margin-bottom: 15px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #f38ba8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #d9266d;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Yuzril</a>
+        <div class="nav-links">
+            <a href="index.html">About</a>
+            <a href="profile.html">Profile</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="formulir.html">Formulir</a>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="form-container">
+            <h1>Formulir Data Teman</h1>
+            <form id="registerForm">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama teman" required>
+                
+                <label for="umur">Umur:</label>
+                <input type="number" id="umur" name="umur" placeholder="Masukkan umur teman" required>
+                
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+                
+                <label for="npm">NPM:</label>
+                <input type="text" id="npm" name="npm" placeholder="Masukkan NPM teman" required>
+                
+                <label for="alumni">Alumni Sekolah:</label>
+                <input type="text" id="alumni" name="alumni" placeholder="Masukkan asal sekolah teman" required>
+                
+                <button type="submit">Simpan Data</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Data teman berhasil disimpan!');
+        });
+    </script>
+</body>
+</html>
